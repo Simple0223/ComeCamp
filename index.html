@@ -2,13 +2,14 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>愛的團隊連結統整處</title>
   <style>
     body {
-      font-family: "Helvetica Neue", Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(to bottom right, #f0f4f7, #dff2e1);
+      font-family: "Segoe UI", "微軟正黑體", sans-serif;
+      background: linear-gradient(135deg, #ffe6f0, #fddde6);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -16,65 +17,74 @@
     }
 
     .container {
-      background-color: #ffffffcc;
-      padding: 40px 30px;
+      background-color: #fff0f5;
+      padding: 30px 20px;
       border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      max-width: 800px;
-      width: 90%;
+      box-shadow: 0 8px 20px rgba(255, 192, 203, 0.4);
       text-align: center;
+      max-width: 400px;
+      width: 90%;
     }
 
     h1 {
-      margin-bottom: 30px;
-      font-size: 28px;
-      color: #333;
+      color: #c94f7c;
+      margin-bottom: 10px;
     }
 
-    .button-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+    p {
+      color: #a86a8e;
+      font-size: 14px;
+      margin-bottom: 25px;
     }
 
     button {
-      padding: 15px 20px;
-      font-size: 18px;
-      cursor: pointer;
-      border-radius: 12px;
+      width: 100%;
+      margin: 10px 0;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: bold;
       border: none;
-      background-color: #4CAF50;
+      border-radius: 12px;
+      background-color: #ff7eb9;
       color: white;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
     }
 
     button:hover {
-      background-color: #45a049;
-      transform: scale(1.05);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+      background-color: #ff5fa2;
+      transform: scale(1.03);
     }
 
-    @media (max-width: 500px) {
+    @media screen and (max-width: 480px) {
+      h1 {
+        font-size: 20px;
+      }
+
       button {
-        font-size: 16px;
-        padding: 12px 16px;
+        font-size: 15px;
+        padding: 12px;
+      }
+
+      .container {
+        padding: 20px;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>愛的團隊連結統整處</h1>
-    <div class="button-grid">
-      <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1SeKj3trHEfmXIeGiNPoiV35IblSiQif_EVJeSuVDEPg/edit?gid=595160726#gid=595160726'">粗流</button>
-      <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1xGshxZ0DRpcPPew9a94kPA3f1amn5HsmfQS443E-vMU/edit?gid=816969129#gid=816969129'">空白教案</button>
-      <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1sehT8vNLqV0zzE2aTpNNRamaA3JPvMns2skp-5X2oNY/edit?gid=0#gid=0'">活動組配搭清單</button>
-      <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1kV3Y9A0RwaLZS3-qnyMhzkeU6hOIusIp0mJ4Nlg4Eds/edit?gid=816969129#gid=816969129'">用餐計劃</button>
-      <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1DTcRrt4XAO1IZ9-TIyWfsxxWafQhWFJW5xMLGD1xzzI/edit?gid=816969129#gid=816969129'">"家"點溫暖</button>
-      <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1bf1nXGLInCUQGs_RzjLvXAnphcWRdHp2COKJcyp2lnw/edit?gid=0#gid=0'">夢想之夜</button>
-      <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1GIzmL7nJ-tUvz0EZH_ScbNV0puOnIMB5EtB0_Nu9qPQ/edit?gid=0#gid=0'">會議記錄</button>
-    </div>
+    <h1>愛的團隊連結</h1>
+    <p>請選擇要前往的文件項目</p>
+
+    <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1SeKj3trHEfmXIeGiNPoiV35IblSiQif_EVJeSuVDEPg/edit?gid=595160726#gid=595160726'">粗流</button>
+    <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1xGshxZ0DRpcPPew9a94kPA3f1amn5HsmfQS443E-vMU/edit?gid=816969129#gid=816969129'">空白教案</button>
+    <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1sehT8vNLqV0zzE2aTpNNRamaA3JPvMns2skp-5X2oNY/edit?gid=0#gid=0'">活動組配搭清單</button>
+    <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1kV3Y9A0RwaLZS3-qnyMhzkeU6hOIusIp0mJ4Nlg4Eds/edit?gid=816969129#gid=816969129'">用餐計劃</button>
+    <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1DTcRrt4XAO1IZ9-TIyWfsxxWafQhWFJW5xMLGD1xzzI/edit?gid=816969129#gid=816969129'">"家"點溫暖</button>
+    <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1bf1nXGLInCUQGs_RzjLvXAnphcWRdHp2COKJcyp2lnw/edit?gid=0#gid=0'">夢想之夜</button>
+    <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1GIzmL7nJ-tUvz0EZH_ScbNV0puOnIMB5EtB0_Nu9qPQ/edit?gid=0#gid=0'">會議記錄</button>
   </div>
 </body>
 </html>
