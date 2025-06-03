@@ -94,8 +94,12 @@
       }
 
       .photo-area {
-        width: 50%;
-        margin-top: 0;
+          width: 50%;
+          margin-top: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 200px;
       }
     }
   </style>
@@ -110,12 +114,15 @@
 
       <label for="name">姓名：</label>
       <input type="text" id="name" placeholder="例如：卡比">
-
+        <br />
       <button onclick="showPhoto()">顯示照片</button>
     </div>
 
     <div class="photo-area" id="photoContainer">
-      <!-- 照片將在這裡顯示 -->
+        <div class="not-found" style="color:#9c27b0;">
+            請輸入組別與姓名<br>
+            我會幫你把照片秀在這邊唷 💖
+        </div>
     </div>
   </div>
 
