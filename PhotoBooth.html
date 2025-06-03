@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>愛的照片牆</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', '微軟正黑體', sans-serif;
+      background: linear-gradient(to bottom right, #ffe0e0, #fff5f5);
+      text-align: center;
+      padding: 50px;
+      color: #6b0f1a;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    input {
+      padding: 10px;
+      margin: 5px;
+      font-size: 1em;
+      border: 2px solid #f8b5c1;
+      border-radius: 8px;
+      width: 200px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #f06292;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #ec407a;
+    }
+
+    .photo-container {
+      margin-top: 40px;
+    }
+
+    img {
+      max-width: 300px;
+      border: 6px solid #f8bbd0;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .not-found {
+      font-size: 1.2em;
+      color: #c62828;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>💗 愛的照片牆 💗</h1>
+  <p>請輸入您的 <strong>組別</strong> 和 <strong>姓名</strong>，我們會為您呈現專屬的愛心照片 😊</p>
+
+  <div>
+    <label for="group">組別：</label>
+    <input type="text" id="group" placeholder="例如：A01">
+    <br>
+    <label for="name">姓名：</label>
+    <input type="text" id="name" placeholder="例如：王信博">
+    <br>
+    <button onclick="showPhoto()">顯示照片</button>
+  </div>
+
+  <div class="photo-container" id="photoContainer"></div>
+
+  <script>
+    function showPhoto() {
+      const group = document.getElementById('group').value.trim();
+      const name = document.getElementById('name').value.trim();
+
+      if (!group || !name) {
+        alert("請完整填寫組別和姓名喔！");
+        return;
+      }
+
+      const filename = `${group}${name}`;
+      const encodedFilename = encodeURIComponent(filename);
+      const imagePath = `./images/${encodedFilename}.jpg`;
+
+      const container = document.getElementById('photoContainer');
+      container.innerHTML = `
+        <img src="${imagePath}" alt="照片載入中..." onerror="handleImageError(this)">
+      `;
+    }
+
+    function handleImageError(img) {
+      img.style.display = 'none';
+      const container = document.getElementById('photoContainer');
+      container.innerHTML = `<div class="not-found">找不到這張照片 😢<br>請確認檔名是否正確。</div>`;
+    }
+  </script>
+</body>
+</html>
