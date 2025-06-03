@@ -3,91 +3,147 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>愛的團隊連結統整</title>
+  <title>愛的照片牆</title>
   <style>
     body {
+      font-family: 'Segoe UI', '微軟正黑體', sans-serif;
+      background: linear-gradient(to bottom right, #ffe0e0, #fff5f5);
+      color: #6b0f1a;
+      padding: 20px;
       margin: 0;
-      padding: 0;
-      font-family: "Segoe UI", "微軟正黑體", sans-serif;
-      background: linear-gradient(135deg, #ffe6f0, #fddde6);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    .container {
-      background-color: #fff0f5;
-      padding: 30px 20px;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(255, 192, 203, 0.4);
-      text-align: center;
-      max-width: 400px;
-      width: 90%;
     }
 
     h1 {
-      color: #c94f7c;
+      text-align: center;
+      font-size: 2em;
       margin-bottom: 10px;
     }
 
-    p {
-      color: #a86a8e;
-      font-size: 14px;
-      margin-bottom: 25px;
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 1em;
+      border: 2px solid #f8b5c1;
+      border-radius: 8px;
     }
 
     button {
-      width: 100%;
-      margin: 10px 0;
-      padding: 14px;
-      font-size: 16px;
-      font-weight: bold;
+      padding: 10px;
+      background-color: #f06292;
       border: none;
-      border-radius: 12px;
-      background-color: #faa2ca;
+      border-radius: 8px;
       color: white;
-      box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+      font-size: 1em;
       cursor: pointer;
-      transition: background-color 0.3s, transform 0.2s;
+      transition: background-color 0.3s;
     }
 
     button:hover {
-      background-color: #ff5fa2;
-      transform: scale(1.03);
+      background-color: #ec407a;
     }
 
-    @media screen and (max-width: 480px) {
-      h1 {
-        font-size: 20px;
-      }
+    .photo-area {
+      margin-top: 20px;
+      text-align: center;
+    }
 
-      button {
-        font-size: 15px;
-        padding: 12px;
-      }
+    img {
+      max-width: 100%;
+      border-radius: 20px;
+      border: 6px solid #f8bbd0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
 
+    .not-found {
+      font-size: 1.1em;
+      color: #c62828;
+      margin-top: 10px;
+    }
+
+    /* ───────────── 手機橫式 ───────────── */
+    @media (orientation: landscape) and (max-width: 1000px) {
       .container {
-        padding: 20px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 40px;
+      }
+
+      .input-group {
+        max-width: 300px;
+        width: 40%;
+        margin-bottom: 0;
+      }
+
+      .photo-area {
+        width: 50%;
+        margin-top: 0;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>愛的團隊連結大集合</h1>
-    <p>請選擇要前往連結</p>
+  <h1>💗 愛的照片牆 💗</h1>
 
-    <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1SeKj3trHEfmXIeGiNPoiV35IblSiQif_EVJeSuVDEPg/edit?gid=595160726#gid=595160726'">粗流</button>
-    <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1xGshxZ0DRpcPPew9a94kPA3f1amn5HsmfQS443E-vMU/edit?gid=816969129#gid=816969129'">空白教案</button>
-    <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1sehT8vNLqV0zzE2aTpNNRamaA3JPvMns2skp-5X2oNY/edit?gid=0#gid=0'">活動組配搭清單</button>
-    <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1kV3Y9A0RwaLZS3-qnyMhzkeU6hOIusIp0mJ4Nlg4Eds/edit?gid=816969129#gid=816969129'">用餐計劃</button>
-    <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1DTcRrt4XAO1IZ9-TIyWfsxxWafQhWFJW5xMLGD1xzzI/edit?gid=816969129#gid=816969129'">"家"點溫暖</button>
-    <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1bf1nXGLInCUQGs_RzjLvXAnphcWRdHp2COKJcyp2lnw/edit?gid=0#gid=0'">夢想之夜</button>
-    <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/1GIzmL7nJ-tUvz0EZH_ScbNV0puOnIMB5EtB0_Nu9qPQ/edit?gid=0#gid=0'">會議記錄</button>
-    <button onclick="window.location.href='https://docs.google.com/spreadsheets/d/13H7RPczRdmMyqdr6zRhES5xtcCcEmLFil6j5n6yC0lk/edit?gid=0#gid=0'">物品&核銷清單</button>
-    <button onclick="window.location.href='https://drive.google.com/drive/folders/1SI3Q4saLt3kpI0lEGAqHofFFBV-AXDiz'">活動組雲端</button>
-    <!--<button onclick="window.location.href=''"></button>-->
+  <div class="container">
+    <div class="input-group">
+      <label for="group">組別：</label>
+      <input type="text" id="group" placeholder="例如：A01">
+
+      <label for="name">姓名：</label>
+      <input type="text" id="name" placeholder="例如：王信博">
+
+      <button onclick="showPhoto()">顯示照片</button>
+    </div>
+
+    <div class="photo-area" id="photoContainer">
+      <!-- 照片將在這裡顯示 -->
+    </div>
   </div>
+
+  <script>
+    function showPhoto() {
+      const group = document.getElementById('group').value.trim();
+      const name = document.getElementById('name').value.trim();
+
+      if (!group || !name) {
+        alert("請完整填寫組別和姓名喔！");
+        return;
+      }
+
+      const filename = encodeURIComponent(group + name);
+      const photoUrl = `./images/${filename}.jpg`;
+
+      const container = document.getElementById('photoContainer');
+      container.innerHTML = `
+        <img src="${photoUrl}" alt="照片載入中..." onerror="handleImageError(this)">
+      `;
+    }
+
+    function handleImageError(img) {
+      img.style.display = 'none';
+      document.getElementById('photoContainer').innerHTML = `
+        <div class="not-found">找不到這張照片 😢<br>請確認資料輸入是否正確。</div>
+      `;
+    }
+  </script>
 </body>
 </html>
