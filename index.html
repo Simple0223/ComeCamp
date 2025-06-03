@@ -88,9 +88,9 @@
       }
 
       .input-group {
-        max-width: 300px;
-        width: 40%;
-        margin-bottom: 0;
+          max-width: 300px;
+          width: 40%;
+          margin-bottom: 0;
       }
 
       .photo-area {
@@ -101,15 +101,15 @@
   </style>
 </head>
 <body>
-  <h1>💗 愛的照片牆 💗</h1>
+  <h1>💗 愛的拍貼機 💗</h1>
 
   <div class="container">
     <div class="input-group">
       <label for="group">組別：</label>
-      <input type="text" id="group" placeholder="例如：A01">
+      <input type="text" id="group" placeholder="例如：0">
 
       <label for="name">姓名：</label>
-      <input type="text" id="name" placeholder="例如：王信博">
+      <input type="text" id="name" placeholder="例如：卡比">
 
       <button onclick="showPhoto()">顯示照片</button>
     </div>
@@ -130,7 +130,8 @@
       }
 
       const filename = encodeURIComponent(group + name);
-      const photoUrl = `./images/${filename}.jpg`;
+        const photoUrl = `https://github.com/Simple0223/ComeCamp/blob/main/${filename}.jpg?raw=true`;
+        
 
       const container = document.getElementById('photoContainer');
       container.innerHTML = `
